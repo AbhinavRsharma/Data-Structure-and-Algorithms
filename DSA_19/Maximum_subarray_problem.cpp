@@ -29,14 +29,14 @@ data* divide_n_conquer(int* arr, int i, int j)
 
         int sum_l = 0, sum_r = 0, max_sum_l = arr[(i+j)/2], max_sum_r = arr[1+(i+j)/2];
         int cross_i = (i+j)/2, cross_j = 1+(i+j)/2;
-        for(int k = (i+j)/2; k>=i; k--){
+        for(int k = (i+j)/2; k>=t1->i; k--){
             sum_l += arr[k];
             if(max_sum_l < sum_l){
                 max_sum_l = sum_l;
                 cross_i = k;
             }
         }
-        for(int k = 1+(i+j)/2; k<=j; k++){
+        for(int k = 1+(i+j)/2; k<=t2->j; k++){
             sum_r += arr[k];
             if(max_sum_r < sum_r){
                 max_sum_r = sum_r;
